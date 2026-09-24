@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--
+  KERANGKA PROFIL — PABW 2026/2027 — Pertemuan 4
+  ==================================================================
+  Berkas ini SUDAH LENGKAP dan sudah lolos W3C Nu Html Checker serta
+  Lighthouse Accessibility. JANGAN mengubah struktur, landmark, label,
+  atau alt untuk memperbaiki tampilan — tampilan diubah dari berkas CSS.
+-->
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Profil Abimanyu Maheswara — PABW 2026/2027</title>
+  <meta name="description" content="Halaman profil mahasiswa PABW: tentang saya, karya, dan kontak.">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/komponen.css">
+  <link rel="stylesheet" href="css/tema.css">
+</head>
+<body>
+  <a class="lewati" href="#utama">Lewati ke konten utama</a>
+
+  <header class="kepala">
+    <input type="checkbox" id="tema" class="pengalih-tema">
+    <div class="header-baris">
+      <h1>Abimanyu Maheswara</h1>
+      <label for="tema" class="tombol-tema">Tema gelap</label>
+      <nav aria-label="Navigasi utama">
+        <ul>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#karya">Karya</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="tagline">Mahasiswa Informatika UII yang aktif di Mapala UNISI, berkegiatan di empat divisi kepetualangan.</p>
+  </header>
+
+  <main id="utama">
+
+    <section id="tentang">
+      <h2>Tentang saya</h2>
+
+      <figure class="foto">
+        <img src="media/foto-profil.jpg"
+             alt="Foto diri Abimanyu Maheswara memakai kemeja putih dan dasi hitam."
+             width="480" height="733" loading="lazy">
+        <figcaption>Foto profil saya.</figcaption>
+      </figure>
+
+      <p>Saya mahasiswa Program Studi Informatika Universitas Islam Indonesia.
+         Di luar kelas, saya aktif di Mapala UNISI dan senang berkegiatan di
+         alam terbuka lewat empat divisi kepetualangan yang ada di sana.
+         Sekarang saya sedang belajar membangun tampilan web yang rapi dan
+         mudah dirawat lewat design token.</p>
+
+      <table>
+        <caption>Kegiatan Mapala UNISI yang saya ikuti semester ini</caption>
+        <thead>
+          <tr>
+            <th scope="col">Kegiatan</th>
+            <th scope="col">Divisi</th>
+            <th scope="col">Waktu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Latihan dasar gunung hutan</th>
+            <td>Gunung Hutan</td>
+            <td><time datetime="2026-08">Agustus 2026</time></td>
+          </tr>
+          <tr>
+            <th scope="row">Pelatihan panjat tebing</th>
+            <td>Panjat Tebing</td>
+            <td><time datetime="2026-09">September 2026</time></td>
+          </tr>
+          <tr>
+            <th scope="row">Susur gua bersama divisi</th>
+            <td>Susur Gua</td>
+            <td><time datetime="2026-09">September 2026</time></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="lini-masa">
+      <h2>Perjalanan saya di Mapala</h2>
+      <ol class="lini">
+        <li><time datetime="2025-08">Agustus 2025</time> — mendaftar sebagai calon anggota Mapala UNISI.</li>
+        <li><time datetime="2025-11">November 2025</time> — lulus pendidikan dasar dan resmi jadi anggota.</li>
+        <li><time datetime="2026-03">Maret 2026</time> — mulai aktif di divisi Gunung Hutan dan Panjat Tebing.</li>
+        <li><time datetime="2026-09">September 2026</time> — membangun halaman profil ini sambil belajar PABW.</li>
+      </ol>
+    </section>
+
+    <section id="karya">
+      <h2>Karya saya</h2>
+      <ul>
+        <li>Halaman Kelas Terbuka Kampus — praktikum P03, HTML semantik dan form.</li>
+        <li>Laporan pendakian gunung hutan — dokumentasi jalur dan logistik tim, 2026.</li>
+        <li>Dokumentasi latihan panjat tebing tingkat dasar untuk anggota baru, 2026.</li>
+      </ul>
+    </section>
+
+    <section id="keterampilan">
+      <h2>Keterampilan dari lapangan</h2>
+      <dl class="keterampilan">
+        <dt>Navigasi darat</dt>
+        <dd>Membaca peta dan kompas untuk kegiatan divisi Gunung Hutan.</dd>
+
+        <dt>Manajemen tali dan simpul</dt>
+        <dd>Dasar-dasar keamanan yang dipakai di divisi Panjat Tebing dan Susur Gua.</dd>
+
+        <dt>Kerja tim di lapangan</dt>
+        <dd>Koordinasi dan pembagian peran saat kegiatan ekspedisi bersama tim.</dd>
+
+        <dt>HTML dan CSS</dt>
+        <dd>Sedang belajar: design token, flexbox, dan tema gelap di mata kuliah PABW.</dd>
+      </dl>
+    </section>
+
+    <section id="kontak">
+      <h2>Hubungi saya</h2>
+      <p>Isi formulir berikut. Semua kolom bertanda wajib harus diisi.</p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Data pengirim</legend>
+
+          <p>
+            <label for="nama">Nama lengkap</label>
+            <input id="nama" name="nama" type="text"
+                   autocomplete="name" required>
+          </p>
+
+          <p>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email"
+                   autocomplete="email" required>
+          </p>
+
+          <p>
+            <label for="nim">NIM</label>
+            <input id="nim" name="nim" type="text" inputmode="numeric"
+                   pattern="[0-9]{8}" aria-describedby="nim-bantuan" required>
+            <span id="nim-bantuan">Delapan digit angka, contoh 25523084.</span>
+          </p>
+
+          <p>
+            <label for="pesan">Pesan</label>
+            <textarea id="pesan" name="pesan" rows="4" required></textarea>
+          </p>
+
+          <button type="submit">Kirim</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <section id="tanya-jawab">
+      <h2>Tanya jawab</h2>
+
+      <details>
+        <summary>Apa itu divisi kepetualangan di Mapala UNISI?</summary>
+        <p>Divisi tempat anggota berlatih dan berkegiatan sesuai minat lapangan
+           tertentu, misalnya gunung hutan, panjat tebing, susur gua, dan
+           arung jeram.</p>
+      </details>
+
+      <details>
+        <summary>Kenapa saya tertarik gabung Mapala?</summary>
+        <p>Saya ingin belajar bertahan dan bekerja sama di alam terbuka, hal
+           yang tidak saya dapatkan hanya dari kelas.</p>
+      </details>
+
+      <details>
+        <summary>Apa yang sedang saya pelajari sekarang?</summary>
+        <p>CSS dan cara menyusun tampilan yang konsisten lewat design token,
+           di sela-sela kegiatan Mapala.</p>
+      </details>
+    </section>
+
+  </main>
+
+  <footer class="kaki">
+    <p>Abimanyu Maheswara · 25523084 · <time datetime="2026">2026</time></p>
+  </footer>
+</body>
+</html>

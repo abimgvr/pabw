@@ -1,0 +1,137 @@
+.kepala {
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-baris {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.kepala nav ul {
+  display: flex;
+  gap: var(--space-4);
+  list-style: none;
+  padding: 0;
+}
+
+.kepala nav a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.kepala nav a:hover { text-decoration: underline; }
+
+.tagline {
+  margin-top: var(--space-2);
+  color: var(--color-fg);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+  padding-block: var(--space-6);
+}
+
+main section {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-1);
+  padding: var(--card-pad);
+}
+
+/* Tabel data */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-4);
+}
+caption {
+  text-align: left;
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-2);
+  color: var(--color-fg);
+}
+th, td {
+  text-align: left;
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Foto profil */
+.foto {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-width: 16rem;
+  margin-bottom: var(--space-4);
+}
+.foto img {
+  border-radius: var(--radius-md);
+  aspect-ratio: 480 / 733;
+  object-fit: cover;
+}
+.foto figcaption {
+  font-size: var(--text-sm);
+}
+
+/* Lini masa */
+ol.lini {
+  margin-top: var(--space-4);
+  padding-left: var(--space-6);
+  border-left: 3px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* Keterampilan */
+dl.keterampilan {
+  margin-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+dl.keterampilan dt {
+  font-weight: 700;
+}
+dl.keterampilan dd {
+  margin-left: var(--space-4);
+  color: var(--color-fg);
+}
+
+/* Karya */
+#karya ul {
+  margin-top: var(--space-4);
+  padding-left: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* Tanya jawab */
+#tanya-jawab details {
+  margin-top: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+}
+#tanya-jawab summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+#tanya-jawab details p {
+  margin-top: var(--space-2);
+}
+
+.kaki {
+  margin-top: var(--space-6);
+  padding-block: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-fg);
+  font-size: var(--text-sm);
+}
