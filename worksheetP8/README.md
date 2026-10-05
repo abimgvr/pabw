@@ -1,4 +1,4 @@
-# PABW — Pertemuan 8: JavaScript Modern ES6+
+# PABW — Pertemuan 8
 
 Nama: Abimanyu Maheswara · NIM: 25523084 · Kelas: E
 
