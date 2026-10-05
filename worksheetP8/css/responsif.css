@@ -1,0 +1,60 @@
+/* responsif.css — Pertemuan 6, mobile-first
+   Urutan: dasar (semua lebar) lalu tambahan min-width, kecil ke besar.
+   Titik henti memakai rem: 48rem = 768 px, 60rem = 960 px (huruf bawaan 16 px). */
+
+/* ===== Dasar: berlaku di semua lebar, tanpa media query ===== */
+body {
+  min-height: 100dvh;                       /* kaki halaman menempel di bawah */
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);    /* cegah anak grid melebarkan halaman */
+  grid-template-rows: auto 1fr auto;
+}
+
+main > section { min-width: 0; }
+
+/* tabel lebar bergulir di dalam wadahnya, bukan menggeser halaman */
+.table-wrap { overflow-x: auto; }
+
+/* susunan P5 yang dulu desktop-first (max-width): kini satu kolom dulu */
+.isi {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "sisi" "utama" "bawah";
+  gap: var(--space-6);
+}
+
+/* ===== Tablet (>= 48rem): foto bersanding dengan teks "Tentang saya" ===== */
+@media (min-width: 48rem) {
+  #tentang {
+    display: grid;
+    grid-template-columns: 12rem minmax(0, 1fr);
+    column-gap: var(--space-6);
+    row-gap: var(--space-4);
+    align-items: start;
+  }
+  #tentang > h2 { grid-column: 1 / -1; }
+  #tentang .foto { grid-column: 1; grid-row: 2 / span 2; margin-bottom: 0; }
+  #tentang > p,
+  #tentang .table-wrap { grid-column: 2; }
+  #tentang table { margin-top: 0; }
+}
+
+/* ===== Desktop (>= 60rem): bagian bersanding dalam dua kolom ===== */
+@media (min-width: 60rem) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+  #tentang,
+  #keterampilan,
+  #kontak,
+  #tanya-jawab { grid-column: 1 / -1; }
+
+  .isi {
+    grid-template-columns: 16rem minmax(0, 1fr);
+    grid-template-areas:
+      "sisi utama"
+      "sisi bawah";
+  }
+}
