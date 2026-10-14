@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Contoh notisia lokal 1",
+    "body": "Contoh data untuk menguji keadaan berhasil ketika API publik tidak tersedia."
+  },
+  {
+    "title": "Contoh notisia lokal 2",
+    "body": "Ganti sumber data di js/api.js hanya jika pengampu mengizinkan penggunaan berkas JSON lokal."
+  }
+]
